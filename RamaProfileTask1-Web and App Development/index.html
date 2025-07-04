@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rama Mohamad | Software Engineer</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Lora:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
+
+  <style>
+    :root {
+      --heading-font: 'Playfair Display', sans-serif;
+      --body-font: 'Noto Nastaliq Urdu', serif;
+      --primary-color: #3A3960;
+      --background-color: #fef9e7;
+      --accent-color: #FFF3C7;
+      --card-bg: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--body-font);
+      background-color: var(--background-color);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: var(--accent-color);
+      padding: 2rem 1rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .logo {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+      border-radius: 50%;
+      background-color: #FFF3C7;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+      display: flex;
+      justify-content: inside;
+      align-items: inside;
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: inside;
+      border-radius: 50%;
+    }
+
+    .sdlc-image {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      display: block;
+      margin: 1rem auto 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+
+    .project-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-icon {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+      border-radius: 24px;
+    }
+
+    .tool-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 1rem; /* spacing between items */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.tool-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 1rem;
+}
+
+
+    .tool-icon {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+    }
+
+    .intro-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+      max-width: 100%; /* Prevent overflow */
+    }
+
+    .intro-photo {
+      width: 100px;
+      height: 100px;
+      flex-shrink: 0; /* Prevent shrinking */
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .intro-header h2 {
+      font-size: 1.6rem;
+      line-height: 1.2;
+      margin: 0;
+      word-break: break-word;
+      max-width: calc(100% - 60px); /* So it wraps nicely next to photo */
+    }
+.soft-skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  gap: 1.2rem 2rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.soft-skills li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1rem;
+}
+
+.soft-skills .icon {
+  width: 70px;
+  height: 70px;
+  stroke: var(--primary-color); /* match your theme */
+  stroke-width: 2;
+}
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.section-title .icon {
+  width: 40px;
+  height: 40px;
+}
+.icon-title {
+  width: 28px;
+  height: 28px;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+.interest-list {
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: #fffbea; /* light yellow highlight */
+  border-radius: 16px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.interest-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  line-height: 1.6;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.interest-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  background-color: #fffde7;
+}
+
+.interest-list .icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.section-title .icon {
+  width: 32px;
+  height: 32px;
+}
+.animated-intro {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  animation: fadeSlideIn 1.4s ease-out forwards, float 4s ease-in-out infinite;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Entrance animation */
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Floating up-down motion */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+/* Colorful animated gradient text */
+.rainbow-text {
+  background: linear-gradient(
+    90deg,
+    #3A3960,
+    #5E686D,
+    #3A3960,
+    #5E686D,
+    #8EACCD,
+    #5E686D
+  );
+  background-size: 400% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowMove 6s linear infinite, fadeSlideIn 1.5s ease-out forwards, float 4s ease-in-out infinite;
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  font-weight: bold;
+}
+
+/* Gradient motion */
+@keyframes rainbowMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Initial fade/slide-in */
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Floating movement */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+
+    h1, h2 {
+      font-family: var(--heading-font);
+      color: var(--primary-color);
+      margin: 0;
+    }
+h2, h3 {
+  display: block;
+  margin: 0.5rem 0;
+}
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
+
+    /* Container wrapping all cards */
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem; /* <-- spacing between cards */
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin:auto;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 0.6s ease both;
+      max-width: 950px;
+      margin: 0;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+.highlight-paragraph {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #2c2c2c;
+  background: #fffef9;
+  padding: 1.5rem 1.8rem;
+  border-left: 5px solid #ffd54f;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: background 0.3s ease;
+}
+.project-problem {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  background-color: #fffef9;
+  padding: 1.5rem 1.5rem;
+  border-left: 5px solid #ffcc66;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  margin-top: 1.5rem;
+}
+
+.project-problem ol {
+  padding-left: 1.5rem;
+  margin-top: 0.8rem;
+}
+
+.project-problem li {
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+
+.highlight-paragraph:hover {
+  background: #fff9e0;
+}
+.project-highlight {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  background-color: #fefdf8;
+  padding: 1.5rem;
+  border-left: 4px solid #89c47f;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  margin-top: 2rem;
+}
+
+.project-highlight p {
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: #222;
+}
+
+.project-points {
+  list-style: none;
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.project-points > li {
+  margin-bottom: 0.8rem;
+  color: #444;
+}
+
+.sub-points {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+  color: #555;
+}
+
+.sub-points li {
+  margin-bottom: 0.4rem;
+}
+
+    .card h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .card ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+
+    .card li {
+      margin-bottom: 1rem;
+      line-height: 1.7;
+    }
+
+    .card.intro-section {
+      max-width: 950px;
+      margin: 0;
+    }
+
+    footer {
+      background-color: var(--accent-color);
+      text-align: center;
+      padding: 1rem;
+      font-size: 1rem;
+    }
+
+    .contact a {
+      color: #333;
+      text-decoration: none;
+      margin: 0 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 1.1rem;
+    }
+
+    .contact a:hover {
+      color: #a67c00;
+    }
+
+    .contact i {
+      font-size: 1.3rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .card h2 {
+        font-size: 1.5rem;
+      }
+
+      .contact a {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.7rem;
+      }
+
+      .card {
+        padding: 1rem;
+        /* margin-bottom: 20rem; <-- no need for huge margin on mobile */
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.jpg" alt="Rama Logo" />
+    </div>
+    <h1>Rama Mohamad</h1>
+    
+    <p>B.Sc. in Software Engineer - In Progress<br> University of Prince Muqrin</p>
+  </header>
+
+  <!-- Wrap all cards inside container -->
+  <div class="container">
+    <section class="card intro-section">
+  <div class="intro-header">
+    <img src="https://img.icons8.com/?size=160&id=jlkrb09buyD6&format=png" class="intro-photo" alt="Duck Icon">
+    <h2 class="animated-intro rainbow-text">Hi, I'm Rama and as a Software Engineer I love Yellow Ducks.</h2>
+
+
+  </div>
+  <p class="highlight-paragraph">
+  Passionate and detail-oriented Software Engineer with a strong command of the Software Development Life Cycle (SDLC). I specialize in turning ideas into efficient, secure, and scalable software solutions. Proficient in both front-end and back-end development, with a sharp focus on quality, performance, and user experience. I thrive on innovation, continuous improvement, and creating technology that truly makes a difference.
+</p>
+
+</section>
+
+
+    <section class="card">
+      <h2>Core SDLC Expertise</h2>
+      <img src="sdlc-expertise.jpg" alt="SDLC Expertise Overview" class="sdlc-image">
+    </section>
+
+    <section class="card">
+      <h2>Tools & Frameworks</h2>
+      <ul class="tool-list">
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" class="tool-icon"> <h2>Figma</h2></li>
+        <li><img src="https://www.vectorlogo.zone/logos/lucidchart/lucidchart-icon.svg" alt="Lucidchart" class="tool-icon"> <h2>Lucidchart</h2></li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" class="tool-icon"><h2>Django</h2> </li>
+        <li><img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman" class="tool-icon"> <h2>Postman</h2></li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="tool-icon"><h2>GitHub</h2> </li>
+        <li><img src="https://cdn.worldvectorlogo.com/logos/trello.svg" alt="Trello" class="tool-icon"> <h2>Trello</h2></li>
+        <li><img src="https://cdn.worldvectorlogo.com/logos/jira-1.svg" alt="Jira" class="tool-icon"> <h2>Jira</h2></li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="tool-icon"><h2>VS Code</h2> </li>
+      </ul>
+    </section>
+
+<section class="card">
+  <h2>Soft Skills</h2>
+  <ul class="soft-skills">
+    <li>
+      <img src="https://img.icons8.com/?size=160&id=1xLqjjkK8oNs&format=png" class="icon" alt="Discipline">
+      <h3>Discipline</h3>
+    </li>
+    <li>
+      <img src="https://img.icons8.com/?size=160&id=eb6QOketFbaZ&format=png" class="icon" alt="Work Independently">
+     <h3> Work Independently</h3>
+    </li>
+    <li>
+      <img src="https://img.icons8.com/?size=128&id=66340&format=png" class="icon" alt="Adaptability & Feedback">
+      <h3>Adaptability & Feedback</h3>
+    </li>
+    <li>
+      <img src="https://img.icons8.com/?size=160&id=WFKaG86DztGg&format=png" class="icon" alt="Active Listening">
+      <h3>Active Listening</h3>
+    </li>
+    <li>
+      <img src="https://img.icons8.com/?size=160&id=sl4jMcfjux0v&format=png" class="icon" alt="Problem Solving">
+      <h3>Problem Solving<h2>
+    </li>
+    <li>
+      <img src="https://img.icons8.com/?size=160&id=hxbthcFjhDGB&format=png" class="icon" alt="Time Management">
+      <h3>Time Management</h3>
+    </li>
+  </ul>
+</section>
+
+
+
+
+    <section class="card">
+      <h2>Projects & Achievements</h2>
+      <ul>
+        <li>
+          <div class="project-header">
+            
+              <strong><h1>Arrivio – Beyond Travel </strong></h1>| </strong>Software Architecture & Design Project</strong><br>
+            <img src="arrivio-icon.png" alt="Arrivio Logo" class="project-icon">
+           
+    
+    
+           
+        <li class="project-problem">
+  A transportation company is facing multiple operational issues due to increased passengers and routes. This surge has made managing trip schedules, vehicle availability, and passenger bookings inefficient, with overreliance on spreadsheets and phone coordination. As a result, users experience:
+  <ol>
+    <li><strong>📈 Increased Passenger & Routes:</strong> Operational complexity, scheduling delays, and inconsistent ticket availability due to lack of real-time updates.</li>
+    <li><strong>🔍 Lost & Found Items:</strong> No tracking system, making item recovery inefficient.</li>
+    <li><strong>🛠️ Lack of Maintenance Scheduling:</strong> Leads to unexpected bus breakdowns, trip delays, and higher repair costs due to reactive maintenance.</li>
+    <li><strong>💰 Financial Management Issues:</strong> Difficulty tracking expenses and inaccurate revenue calculations.</li>
+  </ol>
+</li>
+
+
+        <li>
+          <div class="project-header">
+            <strong><h1>Zahrada - Web Application </strong></h1>| Software Project Management<br>
+            <img src="zahrada-icon.svg" alt="Zahrada Logo" class="project-icon">
+            
+          <li class="project-highlight">
+  <p>
+    <strong>Led a team to outline and manage the development process for <em>"Zahrada"</em></strong>, a web-based platform designed for global users passionate about gardening and crop cultivation.
+  </p>
+
+  <ul class="project-points">
+    <li>🌱 <strong>Soil & Planting Guidance:</strong> Personalized advice on soil types and optimal planting practices.</li>
+    <li>🌦️ <strong>Weather Alerts:</strong> Timely notifications to protect crops from adverse weather conditions.</li>
+    <li>🐛 <strong>Pest & Disease Management:</strong> Strategies to identify and treat common crop issues.</li>
+    <li>🌐 <strong>Community-Sourced Knowledge:</strong> Aggregates global gardening and farming tips.</li>
+    <li>🔗 <strong>API Integrations:</strong> Connects with:
+      <ul class="sub-points">
+        <li>🧠 OpenAI for intelligent recommendations</li>
+        <li>☁️ Weather services for localized forecasts</li>
+        <li>✅ Food safety authorities for country-specific farming standards</li>
+      </ul>
+    </li>
+  </ul>
+</li>
+
+
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="section-title">
+  <img src="https://img.icons8.com/?size=160&id=iW9WoQ7tx2ZS&format=png" class="icon" alt="Interests Icon" />
+  <h2>Interests</h2>
+</div>
+<section class="card">
+  
+  <ul class="interest-list">
+    <li>
+      <img src="https://img.icons8.com/fluency/48/artificial-intelligence.png" alt="AI Icon" class="icon" />
+      <div>
+        <strong>Artificial Intelligence</strong><br>
+        Designing smart systems that learn, adapt, and solve complex problems.
+      </div>
+    </li>
+    <li>
+      <img src="https://img.icons8.com/fluency/48/combo-chart.png" alt="Business Engineering Icon" class="icon" />
+      <div>
+        <strong>AI Business Engineering</strong><br>
+        Bridging AI technologies with strategic business solutions for real-world impact.
+      </div>
+    </li>
+    <li>
+      <img src="https://img.icons8.com/fluency/48/brain.png" alt="NLP Icon" class="icon" />
+      <div>
+        <strong>Natural Language Processing</strong><br>
+        Enabling machines to understand, generate, and interact using human language.
+      </div>
+    </li>
+  </ul>
+</section>
+
+    </section>
+  </div> <!-- end container -->
+
+  <footer>
+    <div class="contact">
+      <a href="ramamohameed9@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+      <a href="tel:+966541175387"><i class="fa-solid fa-phone"></i> Phone</a>
+      <a href="https://www.linkedin.com/in/rama-m-12719b31b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Blu3xW3ouTo%2BextFe1y5a0g%3D%3D" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
+    <p>&copy; 2025 Rama Mohamad</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      alert("Welcome to Rama Mohamad's Portfolio Website!");
+    });
+  </script>
+</body>
+</html>
